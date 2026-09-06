@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="${CODEX_1M_REPO:-companion-inc/codex-1m}"
+REPO="${CODEX_1M_REPO:-advaitpaliwal/codex-1m}"
 REF="${CODEX_1M_REF:-main}"
 RAW_BASE="${CODEX_1M_RAW_BASE:-}"
 INSTALL_DIR="${CODEX_1M_HOME:-${HOME}/.codex/codex-1m}"
