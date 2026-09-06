@@ -41,13 +41,13 @@ Logs go to:
 Apply once and force-restart Codex Desktop:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/companion-inc/codex-1m/main/install.sh | bash -s -- apply
+curl -fsSL https://raw.githubusercontent.com/advaitpaliwal/codex-1m/main/install.sh | bash -s -- apply
 ```
 
 Apply now and auto-reapply after app updates:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/companion-inc/codex-1m/main/install.sh | bash -s -- install-agent
+curl -fsSL https://raw.githubusercontent.com/advaitpaliwal/codex-1m/main/install.sh | bash -s -- install-agent
 ```
 
 Check status:
@@ -75,3 +75,13 @@ codex app-server --analytics-default-enabled \
 ```
 
 This patches local Codex metadata and UI behavior for all local Desktop threads/models launched through the patched app-server. The model/provider still has to actually accept the requested window.
+
+## Source checks (no installation)
+
+```bash
+bash -n install.sh
+node --check codex-1m.js
+node --test test/*.test.mjs
+```
+
+These checks do not patch Codex or load LaunchAgents.
